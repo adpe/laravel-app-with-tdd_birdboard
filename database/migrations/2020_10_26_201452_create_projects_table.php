@@ -15,9 +15,14 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+            // Since Laravel 5.8 it uses bigIncrements as default.
+//            $table->unsignedBigInteger('owner_id');
+            $table->unsignedBigInteger('owner_id');
             $table->string('title');
             $table->text('description');
             $table->timestamps();
+
+            $table->foreign('owner_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
