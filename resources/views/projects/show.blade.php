@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birdboard</title>
-</head>
-<body>
-<h1>{{ $project->title }}</h1>
+@extends ('layouts.app')
 
-<div>{{ $project->description }}</div>
-</body>
-</html>
+@section('content')
+    <h1>{{ $project->title }}</h1>
+    <div>{{ $project->description }}</div>
+    <a href="/projects" class="btn btn-outline-secondary">Go back</a>
+@endsection

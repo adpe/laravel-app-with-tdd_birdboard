@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birdboard</title>
-</head>
-<body>
-    <form method="POST" action="/projects" class="container">
+@extends ('layouts.app')
+
+@section('content')
+    <form method="POST" action="/projects">
         <h1>Create a Project</h1>
         @csrf
         <div class="form-group">
@@ -18,6 +13,6 @@
             <textarea class="form-control" id="description"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Create project</button>
+        <a href="/projects" class="btn btn-link">Cancel</a>
     </form>
-</body>
-</html>
+@endsection
