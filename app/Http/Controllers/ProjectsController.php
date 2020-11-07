@@ -15,9 +15,9 @@ class ProjectsController extends Controller
 
     public function show(Project $project)
     {
-        if (!auth()->check()) {
-            return redirect('/login');
-        }
+//        if (!auth()->check()) {
+//            return redirect('/login');
+//        }
 
         if (auth()->user()->isNot($project->owner)) {
             abort(403);
@@ -41,8 +41,8 @@ class ProjectsController extends Controller
             'description' => 'required'
         ]);
 
-        auth()->user()->projects()->create($attributes);
+        $project = auth()->user()->projects()->create($attributes);
 
-        return redirect('/projects');
+        return redirect($project->path());
     }
 }
