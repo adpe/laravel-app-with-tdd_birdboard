@@ -1,7 +1,7 @@
 @extends ('layouts.app')
 
 @section('content')
-    <header class="flex items-center mb-3 py-4">
+    <header class="flex items-center mb-3 pb-4">
         <div class="flex justify-between items-end w-full">
             <p class="text-grey text-sm font-normal">
                 <a href="/projects" class="text-grey text-sm font-normal no-underline">My Projects</a>
@@ -24,8 +24,10 @@
                                 @csrf
 
                                 <div class="flex items-center">
-                                    <input name="body" class="w-full {{ $task->completed ? 'text-grey' : '' }}" value="{{ $task->body }}">
-                                    <input name="completed" type="checkbox" onChange="this.form.submit()" {{ $task->completed ? 'checked' : '' }}>
+                                    <input name="body" class="w-full {{ $task->completed ? 'text-grey' : '' }}"
+                                           value="{{ $task->body }}">
+                                    <input name="completed" type="checkbox"
+                                           onChange="this.form.submit()" {{ $task->completed ? 'checked' : '' }}>
                                 </div>
                             </form>
                         </div>
@@ -41,9 +43,19 @@
 
                 <div>
                     <h2 class="text-lg text-grey font-normal mb-3">General Notes</h2>
-                    {{-- general notes  --}}
+                    <form action="{{ $project->path() }}" method="POST">
+                        @method('PATCH')
+                        @csrf
 
-                    <textarea class="card w-full" style="min-height: 200px">{{ $project->description }}</textarea>
+                        <textarea
+                            name="notes"
+                            class="card w-full mb-4"
+                            style="min-height: 200px"
+                            placeholder="Anything special that you want to make a note of?"
+                        >{{ $project->notes }}</textarea>
+
+                        <button type="submit" class="button">Save</button>
+                    </form>
                 </div>
             </div>
             <div class="lg: w-1/4 px-3">

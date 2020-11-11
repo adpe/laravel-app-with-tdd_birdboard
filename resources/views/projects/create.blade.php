@@ -1,36 +1,40 @@
 @extends ('layouts.app')
 
 @section('content')
-    <header class="flex items-center mb-3 py-4">
-        <div class="flex justify-between items-end w-full">
-            <p class="text-grey text-sm font-normal">
-                <a href="/projects" class="text-grey text-sm font-normal no-underline">My Projects</a>
-            </p>
-            <a href="/projects/create" class="button">New Project</a>
-        </div>
-    </header>
-
-    <form action="/projects" method="POST" class="w-full">
+    <form action="/projects" method="POST" class="lg:w-1/2 lg:mx-auto bg-white py-12 px-16 rounded shadow">
         @csrf
 
-        <div class="flex -mx-3">
-            <div class="w-full px-3 mb-6">
-                <div class="mb-8">
-                    <h2 class="text-lg text-grey font-normal mb-6">Create a Project</h2>
+        <h1 class="text-2xl font-normal mb-10 text-center">Let's start something new</h1>
 
-                    <div class="w-full mb-6">
-                        <label class="block uppercase text-grey text-xs mb-2" for="title">Title</label>
-                        <input type="text" class="card w-full" name="title" placeholder="Add title...">
-                    </div>
-                    <div class="w-full mb-6">
-                        <label class="block uppercase text-grey text-xs mb-2" for="description">Description</label>
-                        <textarea class="card w-full" style="min-height: 200px" name="description" placeholder="Add description..."></textarea>
-                    </div>
-                    <div class="w-full">
-                        <button type="submit" class="button">Create project</button>
-                        <a href="/projects">Cancel</a>
-                    </div>
-                </div>
+        <div class="field mb-6">
+            <label class="label uppercase text-grey text-xs block mb-2" for="title">Title</label>
+
+            <div class="control">
+                <input type="text"
+                       class="input bg-transparent border border-grey-light rounded p-2 text-xs w-full"
+                       name="title"
+                       placeholder="My next awesome project">
             </div>
+        </div>
+
+        <div class="field mb-6">
+            <label class="label uppercase text-grey text-xs block mb-2" for="description">Description</label>
+
+            <div class="control">
+                <textarea name="description"
+                          class="textarea bg-transparent border border-grey-light rounded p-2 text-xs w-full"
+                          rows="10"
+                          placeholder="I should start learning piano."></textarea>
+            </div>
+        </div>
+
+        <div class="field">
+            <button type="submit" class="button mr-2">
+                Create project
+            </button>
+            <a class="text-grey text-sm" href="/projects">
+                Cancel
+            </a>
+        </div>
     </form>
 @endsection

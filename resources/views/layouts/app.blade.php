@@ -19,13 +19,13 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-grey-light">
+<body class="bg-grey-lighter">
 <div id="app">
     <nav class="bg-white">
         <div class="container mx-auto">
             <div class="flex justify-between items-center py-2">
                 <h1>
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/projects') }}">
                         <svg xmlns="http://www.w3.org/2000/svg" width="291" height="45" viewBox="0 0 291 45"
                              class="text-default relative" style="top: 2px">
                             <g fill="none" fill-rule="evenodd">
@@ -86,7 +86,7 @@
         </div>
     </nav>
 
-    <main class="container mx-auto py-4">
+    <main class="container mx-auto py-6">
         @yield('content')
     </main>
 </div>
