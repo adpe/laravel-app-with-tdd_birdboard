@@ -11,7 +11,7 @@ class TriggerActivityTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test * */
+    /** @test **/
     public function creating_a_project()
     {
         $project = ProjectFactory::create();
@@ -20,7 +20,7 @@ class TriggerActivityTest extends TestCase
         $this->assertEquals('created', $project->activity->first()->description);
     }
 
-    /** @test * */
+    /** @test **/
     public function updating_a_project()
     {
         $project = ProjectFactory::create();
@@ -31,7 +31,7 @@ class TriggerActivityTest extends TestCase
         $this->assertEquals('updated', $project->activity->last()->description);
     }
 
-    /** @test * */
+    /** @test **/
     public function creating_a_new_task()
     {
         $project = ProjectFactory::create();
@@ -42,7 +42,7 @@ class TriggerActivityTest extends TestCase
         $this->assertEquals('created_task', $project->activity->last()->description);
     }
 
-    /** @test * */
+    /** @test **/
     public function completing_a_task()
     {
         $project = ProjectFactory::withTasks(1)->create();
@@ -57,7 +57,7 @@ class TriggerActivityTest extends TestCase
         $this->assertEquals('completed_task', $project->activity->last()->description);
     }
 
-    /** @test * */
+    /** @test **/
     public function incompleting_a_task()
     {
         $project = ProjectFactory::withTasks(1)->create();
