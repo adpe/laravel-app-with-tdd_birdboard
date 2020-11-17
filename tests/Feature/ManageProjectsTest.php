@@ -13,7 +13,7 @@ class ManageProjectsTest extends TestCase
     use WithFaker, RefreshDatabase;
 
     /** @test **/
-    public function guests_cannot_manage_projects()
+    public function unauthorized_users_cannot_manage_projects()
     {
         $project = Project::factory()->create();
 
@@ -49,6 +49,31 @@ class ManageProjectsTest extends TestCase
             ->assertSee($attributes['title'])
             ->assertSee($attributes['description'])
             ->assertSee($attributes['notes']);
+    }
+
+    /** @test **/
+    public function unauthorized_users_cannot_delete_a_project()
+    {
+        $project = ProjectFactory::create();
+
+        $this->delete($project->path())
+            ->assertRedirect('/login');
+
+        $this->signIn();
+
+        $this->delete($project->path())->assertStatus(403);
+    }
+
+    /** @test **/
+    public function a_user_can_delete_a_project()
+    {
+        $project = ProjectFactory::create();
+
+        $this->actingAs($project->owner)
+            ->delete($project->path())
+            ->assertRedirect('/projects');
+
+        $this->assertDatabaseMissing('projects', $project->only('id'));
     }
 
     /** @test **/

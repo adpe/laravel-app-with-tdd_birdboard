@@ -36,7 +36,7 @@ trait RecordsActivity
             return $recordableEvents = static::$recordableEvents;
         }
 
-        return $recordableEvents = ['created', 'updated', 'deleted'];
+        return $recordableEvents = ['created', 'updated'];
     }
 
     /**
