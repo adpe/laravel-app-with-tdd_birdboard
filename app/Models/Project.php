@@ -32,8 +32,19 @@ class Project extends Model
         return $this->tasks()->create(compact('body'));
     }
 
+    // TODO: This should be removed. But then PHPUnit tests break.
     public function activity()
     {
         return $this->hasMany(Activity::class)->latest();
+    }
+
+    public function invite(User $user)
+    {
+        return $this->members()->attach($user);
+    }
+
+    public function members()
+    {
+        return $this->belongsToMany(User::class, 'project_members');
     }
 }
