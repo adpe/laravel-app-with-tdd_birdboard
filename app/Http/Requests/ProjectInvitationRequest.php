@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Gate;
 
 class ProjectInvitationRequest extends FormRequest
 {
+    protected $errorBag = 'invitations';
+
     public function rules()
     {
         return [
@@ -16,7 +18,7 @@ class ProjectInvitationRequest extends FormRequest
 
     public function authorize()
     {
-        return Gate::authorize('update', $this->route('project'));
+        return Gate::authorize('manage', $this->route('project'));
     }
 
     public function messages()
