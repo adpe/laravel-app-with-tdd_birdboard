@@ -1,7 +1,7 @@
 @csrf
 
 <div class="field mb-6">
-    <label class="label uppercase text-grey text-xs block mb-2" for="title">Title</label>
+    <label class="label uppercase text-default text-xs block mb-2" for="title">Title</label>
 
     <div class="control">
         <input type="text"
@@ -14,7 +14,7 @@
 </div>
 
 <div class="field mb-6">
-    <label class="label uppercase text-grey text-xs block mb-2" for="description">Description</label>
+    <label class="label uppercase text-default text-xs block mb-2" for="description">Description</label>
 
     <div class="control">
         <textarea name="description"
@@ -29,7 +29,7 @@
     <button type="submit" class="button mr-2">
         {{ $buttonText }}
     </button>
-    <a class="text-grey text-sm" href="{{ $project->path() }}">
+    <a class="text-default text-sm" href="{{ $project->path() }}">
         Cancel
     </a>
 </div>

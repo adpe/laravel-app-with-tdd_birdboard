@@ -347,7 +347,10 @@ module.exports = {
   |
   */
 
-  textColors: colors,
+  textColors: {
+      default: 'var(--text-default-color)',
+      button: 'var(--button-text-color)'
+  },
 
 
   /*
@@ -364,7 +367,12 @@ module.exports = {
   |
   */
 
-  backgroundColors: colors,
+  backgroundColors: {
+      page: 'var(--page-background-color)',
+      card: 'var(--card-background-color)',
+      button: 'var(--button-background-color)',
+      header: 'var(--header-background-color)'
+  },
 
 
   /*
