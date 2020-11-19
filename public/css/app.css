@@ -558,6 +558,24 @@ table {
  * @import "components/forms";
  */
 
+.theme-light {
+  --page-background-color: #f5f6f9;
+  --card-background-color: white;
+  --button-background-color: #47cdff;
+  --button-text-color: white;
+  --header-background-color: white;
+  --text-default-color: #222;
+}
+
+.theme-dark {
+  --page-background-color: #17181e;
+  --card-background-color: #1f2027;
+  --button-background-color: #59b6f9;
+  --button-text-color: #222;
+  --header-background-color: #1f2027;
+  --text-default-color: white;
+}
+
 .button {
   background-color: var(--button-background-color);
   color: var(--button-text-color);
@@ -573,15 +591,25 @@ table {
 
 .card {
   background-color: var(--card-background-color);
+  color: var(--text-default-color);
   padding: 1.25rem;
   border-radius: .5rem;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, .08);
+}
+
+body,
+button {
   color: var(--text-default-color);
 }
 
 input {
   background-color: var(--card-background-color);
   color: var(--text-default-color);
+}
+
+.section {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /**
@@ -4523,24 +4551,6 @@ input {
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
-
-.theme-light {
-  --page-background-color: #f5f6f9;
-  --card-background-color: white;
-  --button-background-color: #47cdff;
-  --header-background-color: white;
-  --text-default-color: #222;
-  --button-text-color: white;
-}
-
-.theme-dark {
-  --page-background-color: #17181e;
-  --card-background-color: #1f2027;
-  --button-background-color: #59b6f9;
-  --header-background-color: #1f2027;
-  --text-default-color: white;
-  --button-text-color: #222;
-}
 
 @media (min-width: 576px) {
   .sm\:list-reset {
