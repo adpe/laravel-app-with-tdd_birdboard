@@ -3,6 +3,10 @@
 
     color: white;
 
+    &.is-success {
+        @apply .bg-card .border .border-success .text-success;
+    }
+
     &.is-outlined {
         @apply .bg-card .border .border-accent .text-accent;
     }

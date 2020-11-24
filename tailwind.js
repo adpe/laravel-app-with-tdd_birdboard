@@ -52,6 +52,7 @@ let colors = {
   'muted': 'var(--text-muted-color)',
   'muted-light': 'var(--text-muted-light-color)',
   'error': 'var(--text-error-color)',
+  'success': 'var(--text-success-color)',
 
   'black': '#222222',
   'grey-darkest': '#3d4852',
