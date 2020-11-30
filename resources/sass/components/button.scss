@@ -1,5 +1,5 @@
 .button {
-    @apply .bg-button .no-underline .rounded-lg .text-sm .py-2 .px-5;
+    @apply .bg-button .border .border-transparent .no-underline .rounded-lg .text-sm .py-2 .px-5;
 
     color: white;
 
@@ -7,8 +7,13 @@
         @apply .bg-card .border .border-success .text-success;
     }
 
+    &:hover,
     &.is-outlined {
         @apply .bg-card .border .border-accent .text-accent;
+    }
+
+    &.is-outlined:hover {
+        @apply .bg-button .border .border-muted-light .text-white;
     }
 
     .theme-light & {
@@ -17,5 +22,37 @@
 
     .theme-dark & {
         box-shadow: 0 2px 7px 0 #00658b;
+    }
+}
+
+.button-red {
+    @apply .bg-red-light .border .border-transparent .no-underline .text-white .rounded-lg .text-xs .py-1 .px-2;
+
+    &:hover {
+        @apply .bg-card .border-red-light .text-red-light;
+    }
+
+    .theme-light & {
+        box-shadow: 0 2px 7px 0 #f9acaa;
+    }
+
+    .theme-dark & {
+        box-shadow: 0 2px 7px 0 #e3342f;
+    }
+}
+
+.button-green {
+    @apply .bg-card .border .border-green .no-underline .rounded-lg .text-green .text-xs .py-1 .px-2;
+
+    &:hover {
+        @apply .bg-green .border-transparent .text-white;
+    }
+
+    .theme-light & {
+        box-shadow: 0 2px 7px 0 #1f9d55;
+    }
+
+    .theme-dark & {
+        box-shadow: 0 2px 7px 0 #38c172;
     }
 }

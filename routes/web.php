@@ -16,11 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', [ProjectsController::class, 'index']);
+
     Route::resource('projects', ProjectsController::class);
 
     Route::post('/projects/{project}/tasks', [ProjectTasksController::class, 'store']);

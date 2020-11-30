@@ -25,7 +25,7 @@
         <div class="container mx-auto">
             <div class="flex justify-between items-center py-1">
                 <h1>
-                    <a class="navbar-brand" href="{{ url('/projects') }}">
+                    <a class="navbar-brand" href="{{ url('/') }}">
                         <svg xmlns="http://www.w3.org/2000/svg" width="291" height="45" viewBox="0 0 291 45"
                              class="text-default relative" style="top: 2px">
                             <g fill="none" fill-rule="evenodd">
@@ -45,15 +45,14 @@
                 <div>
                     <!-- Right Side Of Navbar -->
                     <div class="flex items-center ml-auto">
+                        <theme-switcher></theme-switcher>
                         <!-- Authentication Links -->
                         @guest
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="no-underline text-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             @if (Route::has('register'))
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="no-underline text-link ml-2" href="{{ route('register') }}">{{ __('Register') }}</a>
                             @endif
                         @else
-                            <theme-switcher></theme-switcher>
-
                             <dropdown align="right" width="100%">
                                 <template v-slot:trigger>
                                     <button class="flex items-center text-default no-underline text-sm focus:outline-none">

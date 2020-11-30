@@ -1,7 +1,7 @@
 @if ($errors->{ $bag ?? 'default' }->any())
-    <ul class="field mt-6 list-reset">
+    <ul class="field list-reset @if (isset($bag) && $bag == 'invitations') mt-6 @else my-6 @endif">
         @foreach ($errors->{ $bag ?? 'default' }->all() as $error)
-            <li class="text-sm text-red">{{ $error }}</li>
+            <li class="text-sm text-red-light">{{ $error }}</li>
         @endforeach
     </ul>
 @endif

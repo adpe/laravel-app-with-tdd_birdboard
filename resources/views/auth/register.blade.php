@@ -8,7 +8,7 @@
         <h1 class="text-2xl font-normal mb-10 text-center">{{ __('Register') }}</h1>
 
         <div class="field mb-6">
-            <label for="name" class="label uppercase text-grey text-xs block mb-2">{{ __('Name') }}</label>
+            <label for="name" class="label uppercase text-xs block mb-2">{{ __('Name') }}</label>
 
             <div class="control">
                 <input id="name"
@@ -23,7 +23,7 @@
         </div>
 
         <div class="field mb-6">
-            <label for="email" class="label uppercase text-grey text-xs block mb-2">{{ __('E-Mail Address') }}</label>
+            <label for="email" class="label uppercase text-xs block mb-2">{{ __('E-Mail Address') }}</label>
 
             <div class="control">
                 <input id="email"
@@ -37,7 +37,7 @@
         </div>
 
         <div class="field mb-6">
-            <label for="password" class="label uppercase text-grey text-xs block mb-2">{{ __('Password') }}</label>
+            <label for="password" class="label uppercase text-xs block mb-2">{{ __('Password') }}</label>
 
             <div class="control">
                 <input id="password"
@@ -50,7 +50,7 @@
         </div>
 
         <div class="field mb-6">
-            <label for="password-confirmation" class="label uppercase text-grey text-xs block mb-2">{{ __('Confirm Password') }}</label>
+            <label for="password-confirmation" class="label uppercase text-xs block mb-2">{{ __('Confirm Password') }}</label>
 
             <div class="control">
                 <input id="password-confirmation"

@@ -49,6 +49,10 @@
 @import 'components/card';
 @import 'components/dropdown';
 
+body {
+    font-family: 'Nunito';
+}
+
 body,
 button {
     @apply .text-default;
@@ -60,6 +64,14 @@ input {
 
 .section {
     @apply .px-8;
+}
+
+.theme-dark .vm--modal {
+    @apply .bg-card;
+}
+
+button:focus {
+    outline: none;
 }
 
 /**

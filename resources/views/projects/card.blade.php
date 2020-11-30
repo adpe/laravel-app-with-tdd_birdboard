@@ -11,7 +11,7 @@
                 @csrf
                 @method('DELETE')
 
-                <button type="submit" class="text-xs">Delete</button>
+                <button type="submit" class="button-red text-xs">Delete</button>
             </form>
         </footer>
     @endcan

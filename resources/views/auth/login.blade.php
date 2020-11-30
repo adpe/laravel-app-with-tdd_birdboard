@@ -8,7 +8,7 @@
         <h1 class="text-2xl font-normal mb-10 text-center">{{ __('Login') }}</h1>
 
         <div class="field mb-6">
-            <label for="email" class="label uppercase text-grey text-xs block mb-2">{{ __('E-Mail Address') }}</label>
+            <label for="email" class="label uppercase text-xs block mb-2">{{ __('E-Mail Address') }}</label>
 
             <div class="control">
                 <input id="email"
@@ -23,7 +23,7 @@
         </div>
 
         <div class="field mb-6">
-            <label for="password" class="label uppercase text-grey text-xs block mb-2">{{ __('Password') }}</label>
+            <label for="password" class="label uppercase text-xs block mb-2">{{ __('Password') }}</label>
 
             <div class="control">
                 <input id="password"
@@ -50,17 +50,15 @@
         </div>
 
         <div class="field">
-            <div class="col-md-8 offset-md-4">
-                <button type="submit" class="button mr-2">
-                    {{ __('Login') }}
-                </button>
+            <button type="submit" class="button mr-2">
+                {{ __('Login') }}
+            </button>
 
-                @if (Route::has('password.request'))
-                    <a class="text-grey text-sm" href="{{ route('password.request') }}">
-                        {{ __('Forgot Your Password?') }}
-                    </a>
-                @endif
-            </div>
+            @if (Route::has('password.request'))
+                <a class="text-link text-sm no-underline" href="{{ route('password.request') }}">
+                    {{ __('Forgot Your Password?') }}
+                </a>
+            @endif
         </div>
     </form>
 @endsection

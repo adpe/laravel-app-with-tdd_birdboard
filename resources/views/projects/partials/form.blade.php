@@ -29,7 +29,7 @@
     <button type="submit" class="button mr-2">
         {{ $buttonText }}
     </button>
-    <a class="text-default text-sm" href="{{ $project->path() }}">
+    <a class="text-default text-sm no-underline" href="{{ $project->path() }}">
         Cancel
     </a>
 </div>
@@ -37,7 +37,7 @@
 @if ($errors->any())
     <div class="field mt-6">
         @foreach ($errors->all() as $error)
-            <li class="text-sm text-red">{{ $error }}</li>
+            <li class="text-sm text-red-light">{{ $error }}</li>
         @endforeach
     </div>
 @endif

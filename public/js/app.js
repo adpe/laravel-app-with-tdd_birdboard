@@ -2045,11 +2045,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -3549,7 +3544,7 @@ var render = function() {
                     }
                   ],
                   staticClass:
-                    "border border-muted p-2 text-xs block w-full rounded",
+                    "bg-card border border-muted p-2 text-default text-xs block w-full rounded",
                   class: _vm.form.errors.description
                     ? "border-error"
                     : "border-muted",
@@ -3616,55 +3611,14 @@ var render = function() {
               _c(
                 "button",
                 {
-                  staticClass: "inline-flex items-center text-xs",
+                  staticClass: "button-green inline-flex items-center text-xs",
                   attrs: { type: "button" },
                   on: { click: _vm.addTask }
                 },
                 [
-                  _c(
-                    "svg",
-                    {
-                      staticClass: "mr-2",
-                      attrs: {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        width: "18",
-                        height: "18",
-                        viewBox: "0 0 18 18"
-                      }
-                    },
-                    [
-                      _c(
-                        "g",
-                        {
-                          attrs: {
-                            fill: "none",
-                            "fill-rule": "evenodd",
-                            opacity: ".307"
-                          }
-                        },
-                        [
-                          _c("path", {
-                            attrs: {
-                              stroke: "#000",
-                              "stroke-opacity": ".012",
-                              "stroke-width": "0",
-                              d: "M-3-3h24v24H-3z"
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("path", {
-                            attrs: {
-                              fill: "#000",
-                              d:
-                                "M9 0a9 9 0 0 0-9 9c0 4.97 4.02 9 9 9A9 9 0 0 0 9 0zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7zm1-11H8v3H5v2h3v3h2v-3h3V8h-3V5z"
-                            }
-                          })
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Add New Task Field")])
+                  _vm._v(
+                    "\n                    Add New Task Field\n                "
+                  )
                 ]
               )
             ])
@@ -3679,7 +3633,7 @@ var render = function() {
                 attrs: { type: "button", id: "reset" },
                 on: { click: _vm.reset }
               },
-              [_vm._v("Reset")]
+              [_vm._v("Reset\n            ")]
             ),
             _vm._v(" "),
             _c(
@@ -3693,7 +3647,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("Cancel")]
+              [_vm._v("Cancel\n            ")]
             ),
             _vm._v(" "),
             _c("button", { staticClass: "button" }, [_vm._v("Create Project")])
